@@ -23,13 +23,6 @@ RUN \
   apt-get install -y byobu curl git htop man unzip vim wget && \
   rm -rf /var/lib/apt/lists/*
 
-# Install Python runtime
-RUN  apt-get install –y  \
-           -o APT::Install-Recommended=false –o APT::Install-Suggests=false \
-python3 python3-pip
-
-RUN pip3 install virtualenv
-		
 # Set environment variables.
 ENV HOME /root
 
